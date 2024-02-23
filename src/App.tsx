@@ -1,5 +1,5 @@
 import { FC } from "react"
-import HeadPage from "./Pages/HeadPage.tsx"
+import HeadPage from "./pages/HeadPage.tsx"
 
 const App: FC = () => {
 	return (
