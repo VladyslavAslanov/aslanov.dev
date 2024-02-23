@@ -1,9 +1,5 @@
 import { FC } from "react"
-
-interface LinkProps {
-	title: string
-	link: string
-}
+import { LinkProps } from "../interfaces/LinkProps.ts"
 
 const Link: FC<LinkProps> = ({ title, link }) => {
 	return (
