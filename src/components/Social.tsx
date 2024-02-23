@@ -20,7 +20,13 @@ const Social: FC = () => {
 	return (
 		<div className="flex gap-4 select-none">
 			{links.map((link) => {
-				return <Link title={link.title} link={link.link} />
+				return (
+					<Link
+						key={link.title}
+						title={link.title}
+						link={link.link}
+						underline />
+				)
 			})}
 		</div>
 	)

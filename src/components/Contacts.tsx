@@ -16,7 +16,13 @@ const Contacts: FC = () => {
 	return (
 		<div className="flex flex-col justify-center items-center">
 			{contactInfo.map((link) => {
-				return <Link title={link.title} link={link.link} />
+				return (
+					<Link
+						key={link.title}
+						title={link.title}
+						link={link.link}
+						underline />
+				)
 			})}
 		</div>
 	)
