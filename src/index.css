@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+@font-face {
+    font-family: researcher;
+    src: url("./fonts/KodeMono.ttf");
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: "researcher", sans-serif;
     font-weight: 500;
     font-style: normal;
     height: 100vh;
