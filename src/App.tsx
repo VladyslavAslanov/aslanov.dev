@@ -3,7 +3,7 @@ import { FC } from "react"
 const App: FC = () => {
 	return (
 		<div className="flex justify-center items-center h-full flex-col gap-4">
-			<div className="flex gap-4">
+			<div className="flex gap-4 select-none">
 				<a href="https://docs.google.com/document/d/1fniXTjOW-U2C7ixGPAzgSBLZ3pgqBpNwuTQsXdTiDMs/edit?usp=sharing"
 					 target="_blank"
 					 className="cursor-pointer underline underline-offset-4">
@@ -20,7 +20,7 @@ const App: FC = () => {
 					GitHub
 				</a>
 			</div>
-			<div className="flex flex-col gap-2 mt-4 mb-4">
+			<div className="flex flex-col gap-2 mt-4 mb-4 select-none">
 				<h1 className="font-bold text-6xl text-center">Vladyslav Aslanov</h1>
 				<h2 className="text-3xl text-center">Software Engineer</h2>
 			</div>
