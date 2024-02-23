@@ -12,6 +12,9 @@ const App: FC = () => {
 				<a href="https://www.linkedin.com/in/vladyslav-aslanov/"
 					 target="_blank"
 					 className="cursor-pointer underline">LinkedIn</a>
+				<a href="https://github.com/VladyslavAslanov"
+					 target="_blank"
+					 className="cursor-pointer underline">GitHub</a>
 			</div>
 		</div>
 	)
