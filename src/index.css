@@ -19,3 +19,12 @@ body {
     height: 100vh;
 }
 
+::-moz-selection {
+    color: #000000;
+    background: #FFFF00;
+}
+
+::selection {
+    color: #000000;
+    background: #FFFF00;
+}
