@@ -6,15 +6,17 @@ const App: FC = () => {
 	const cursorDot = document.querySelector("[data-cursor-dot]") as HTMLElement
 	const cursorOutline = document.querySelector("[data-cursor-outline]") as HTMLElement
 
-	window.addEventListener("mousemove", (e: MouseEvent) => {
+	const handleMouseMove = (e: MouseEvent) => {
 		cursorDot.style.left = `${e.clientX}px`
 		cursorDot.style.top = `${e.clientY}px`
 
 		cursorOutline.animate({
 			left: `${e.clientX}px`,
 			top: `${e.clientY}px`
-		}, { duration: 500, fill: "forwards" })
-	})
+		}, { duration: 800, fill: "forwards" })
+	}
+
+	window.addEventListener("mousemove", handleMouseMove)
 
 	return (
 		<div className="h-full dark:bg-black">
