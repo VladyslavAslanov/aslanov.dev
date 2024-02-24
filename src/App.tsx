@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import HeadPage from "./pages/HeadPage.tsx"
 import Navbar from "./components/Navbar.tsx"
 
@@ -16,7 +16,9 @@ const App: FC = () => {
 		}, { duration: 800, fill: "forwards" })
 	}
 
-	window.addEventListener("mousemove", handleMouseMove)
+	useEffect(() => {
+		window.addEventListener("mousemove", handleMouseMove)
+	}, [])
 
 	return (
 		<div className="h-full dark:bg-black">
