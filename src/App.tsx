@@ -20,6 +20,13 @@ const App: FC = () => {
 		window.addEventListener("mousemove", handleMouseMove)
 	}, [])
 
+	if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Chrome") == -1) {
+		const cursorOutline = document.querySelector(".cursor-outline") as HTMLElement
+		if (cursorOutline !== null) {
+			cursorOutline.style.display = "none"
+		}
+	}
+
 	return (
 		<div className="h-full dark:bg-black">
 			<Navbar />
