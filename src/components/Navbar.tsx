@@ -33,7 +33,7 @@ const Navbar: FC = () => {
 		}
 	]
 	return (
-		<div className="p-8 flex justify-center items-center gap-8 flex-wrap">
+		<div className="pt-4 pb-4 pl-8 pr-8 flex justify-center items-center gap-8 flex-wrap bg-white dark:bg-black">
 			{navbarList.map((item) => {
 				return (
 					<Link

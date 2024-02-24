@@ -1,11 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: KodeMono;
     src: url("./fonts/KodeMono.ttf");
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    cursor: none !important;
+}
 
 body {
     font-family: "KodeMono", sans-serif;
@@ -14,22 +18,8 @@ body {
     height: 100svh;
 }
 
-html, body, * {
-    cursor: none !important;
-}
-
 #root {
     height: 100svh;
-}
-
-::-moz-selection {
-    color: #000000;
-    background: #FFFF00;
-}
-
-::selection {
-    color: #000000;
-    background: #FFFF00;
 }
 
 .cursor-dot {
@@ -53,6 +43,16 @@ html, body, * {
     border-radius: 50%;
     pointer-events: none;
     z-index: 99;
+}
+
+::-moz-selection {
+    color: #000000;
+    background: #FFFF00;
+}
+
+::selection {
+    color: #000000;
+    background: #FFFF00;
 }
 
 @media (prefers-color-scheme: dark) {
