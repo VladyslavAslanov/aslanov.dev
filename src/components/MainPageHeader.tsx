@@ -3,7 +3,7 @@ import Contacts from "./Contacts.tsx"
 
 const MainPageHeader: FC = () => {
 	return (
-		<div className="flex flex-col gap-5 mt-4">
+		<div className="flex flex-col gap-5 mt-8 mb-16">
 			<h1 className="font-bold text-6xl text-center dark:text-white">Vladyslav Aslanov</h1>
 			<h2 className="text-3xl text-center dark:text-white mb-4">Software Engineer</h2>
 			<Contacts />
