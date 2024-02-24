@@ -32,30 +32,27 @@ html, body, * {
     background: #FFFF00;
 }
 
-.custom-cursor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    z-index: 99;
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: #000000;
 }
 
-.site-wide {
+.cursor-outline {
     width: 15px;
     height: 15px;
-    border-radius: 50%;
-    border: 1px dashed #000000;
+    border: 2px dashed #000000;
 }
 
-.site-wide .pointer {
+.cursor-dot,
+.cursor-outline {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 3px;
-    height: 3px;
     border-radius: 50%;
-    border: 1px dashed #000000;
+    pointer-events: none;
+    z-index: 99;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,11 +60,11 @@ html, body, * {
         background-color: #000000;
     }
 
-    .site-wide {
-        border: 1px dashed #FFFFFF;
+    .cursor-dot {
+        background-color: #FFFFFF;
     }
 
-    .site-wide .pointer {
-        border: 1px dashed #FFFFFF;
+    .cursor-outline {
+        border: 2px dashed #FFFFFF;
     }
 }

@@ -2,21 +2,20 @@ import { FC } from "react"
 import HeadPage from "./pages/HeadPage.tsx"
 import Navbar from "./components/Navbar.tsx"
 
-const cursor = document.querySelector(".custom-cursor.site-wide") as HTMLElement
-
-document.addEventListener("mouseenter", () => {
-	cursor.style.display = "block"
-})
-
-document.addEventListener("mouseleave", () => {
-	cursor.style.display = "none"
-})
-
-document.addEventListener("mousemove", (e: MouseEvent) => {
-	cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
-})
-
 const App: FC = () => {
+	const cursorDot = document.querySelector("[data-cursor-dot]") as HTMLElement
+	const cursorOutline = document.querySelector("[data-cursor-outline]") as HTMLElement
+
+	window.addEventListener("mousemove", (e: MouseEvent) => {
+		cursorDot.style.left = `${e.clientX}px`
+		cursorDot.style.top = `${e.clientY}px`
+
+		cursorOutline.animate({
+			left: `${e.clientX}px`,
+			top: `${e.clientY}px`
+		}, { duration: 500, fill: "forwards" })
+	})
+
 	return (
 		<div className="h-full dark:bg-black">
 			<Navbar />
