@@ -9,9 +9,10 @@ const MainPageHeader: FC = () => {
 			<Contacts />
 			<span className="text-center dark:text-white">Brno, Czech Republic (GMT +1)</span>
 			<p className="dark:text-white text-center max-w-4xl mt-10">
-				Software engineer with more than 2 years of commercial experience, focusing on frontend development. Proficient
-				in TypeScript, React, and Redux, with experience in backend development using Node.js and Python. Skilled in
-				conducting market research and developing software according to customer requirements.
+				Software engineer with <span className="bg-[#FFFF00]">more than 2 years of commercial experience</span>,
+				focusing on frontend development.
+				Proficient in TypeScript, React, and Redux, with experience in backend development using Node.js and Python.
+				Skilled in conducting market research and developing software according to customer requirements.
 			</p>
 		</div>
 	)

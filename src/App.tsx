@@ -16,16 +16,26 @@ const App: FC = () => {
 		}, { duration: 800, fill: "forwards" })
 	}
 
-	useEffect(() => {
-		window.addEventListener("mousemove", handleMouseMove)
-	}, [])
-
 	if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Chrome") == -1) {
 		const cursorOutline = document.querySelector(".cursor-outline") as HTMLElement
 		if (cursorOutline !== null) {
 			cursorOutline.style.display = "none"
 		}
 	}
+
+	function isMobile() {
+		const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+		return regex.test(navigator.userAgent)
+	}
+
+	useEffect(() => {
+		if (isMobile()) {
+			cursorDot.style.display = "none"
+			cursorOutline.style.display = "none"
+		}
+
+		window.addEventListener("mousemove", handleMouseMove)
+	}, [])
 
 	return (
 		<div className="h-full dark:bg-black">
