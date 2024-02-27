@@ -1,5 +1,7 @@
 import { FC, useEffect } from "react"
 import HeadPage from "./pages/HeadPage.tsx"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Mentoring from "./pages/Mentoring.tsx"
 
 const App: FC = () => {
 	const cursorDot = document.querySelector("[data-cursor-dot]") as HTMLElement
@@ -38,7 +40,12 @@ const App: FC = () => {
 
 	return (
 		<div className="h-full dark:bg-black">
-			<HeadPage />
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<HeadPage />} />
+					<Route path="/mentoring" element={<Mentoring />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	)
 }

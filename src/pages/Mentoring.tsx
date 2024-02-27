@@ -3,7 +3,7 @@ import { FC } from "react"
 const Mentoring: FC = () => {
 	return (
 		<div>
-
+			Test
 		</div>
 	)
 }

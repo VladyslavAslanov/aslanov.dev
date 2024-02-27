@@ -5,7 +5,7 @@ const Social: FC = () => {
 	const links = [
 		{
 			title: "Resume",
-			link: "https://docs.google.com/document/d/1fniXTjOW-U2C7ixGPAzgSBLZ3pgqBpNwuTQsXdTiDMs/edit?usp=sharing"
+			link: "https://drive.google.com/file/d/1an_ZSqunaT2-hjkBnMkgsUPeREYI0knM/view?usp=sharing"
 		},
 		{
 			title: "LinkedIn",
